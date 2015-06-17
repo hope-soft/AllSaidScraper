@@ -3,7 +3,7 @@
 // including some code snippets below that you should find helpful
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
-$html = scraperWiki::scrape("http://web.archive.org/web/20110514112442/http://unstats.un.org/unsd/demographic/products/socind/education.htm");
+$html = scraperWiki::scrape("www.prothom-alo.com");
 $dom = new simple_html_dom();
 $dom->load($html);
 foreach($dom->find("div[@align='left'] tr") as $data){
