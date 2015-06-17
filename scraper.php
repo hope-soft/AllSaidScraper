@@ -15,7 +15,8 @@ foreach($dom->find("div[@align='left'] tr") as $data){
         );
         print json_encode($record) . "\n";
     }
-}  
+}
+scraperwiki::save(array('country'), $record);        
 // // Read in a page
 // $html = scraperwiki::scrape("http://foo.com");
 //
