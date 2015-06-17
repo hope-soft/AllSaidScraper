@@ -16,7 +16,12 @@ foreach($dom->find("div[@align='left'] tr") as $data){
         print json_encode($record) . "\n";
     }
 }
-scraperwiki::save(array('country'), $record);        
+scraperwiki::save(array('country'), $record);   
+$data = scraperwiki::select(           
+    "* from AllSaidScraper.swdata 
+    order by years_in_school desc limit 10"
+);
+print_r($data);
 // // Read in a page
 // $html = scraperwiki::scrape("http://foo.com");
 //
