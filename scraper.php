@@ -18,8 +18,7 @@ foreach($dom->find("div[@align='left'] tr") as $data){
 }
 scraperwiki::save(array('country'), $record);   
 $data = scraperwiki::select(           
-    "* from AllSaidScraper.swdata 
-    order by years_in_school desc limit 10"
+    "* from AllSaidScraper.swdata"
 );
 print_r($data);
 // // Read in a page
