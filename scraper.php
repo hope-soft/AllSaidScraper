@@ -4,7 +4,7 @@
  require 'scraperwiki.php';
  require 'scraperwiki/simple_html_dom.php';
             
-  $html = scraperwiki.scrape("http://web.archive.org/web/20110514112442/http://unstats.un.org/unsd/demographic/products/socind/education.htm");
+  $html = scraperwiki.scrape("http://web.archive.org/web/20110514112442/http://unstats.un.org/unsd/demographic/products/socind/education.htm")
   print $html;
 // // Read in a page
 // $html = scraperwiki::scrape("http://foo.com");
