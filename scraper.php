@@ -4,23 +4,7 @@
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 $html = scraperWiki::scrape("www.prothom-alo.com");
-$dom = new simple_html_dom();
-$dom->load($html);
-foreach($dom->find("div[@align='left'] tr") as $data){
-    $tds = $data->find("td");
-    if(count($tds)==12){
-        $record = array(
-            'country' => $tds[0]->plaintext,
-            'years_in_school' => intval($tds[4]->plaintext)
-        );
-        print json_encode($record) . "\n";
-    }
-}
-scraperwiki::save(array('country'), $record);   
-$data = scraperwiki::select(           
-    "* from AllSaidScraper.swdata"
-);
-print_r($data);
+print $html;
 // // Read in a page
 // $html = scraperwiki::scrape("http://foo.com");
 //
